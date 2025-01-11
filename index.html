@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal PDF Conversion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="py-3 border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a href="" class="d-flex gap-2 text-decoration-none text-dark" style="font-size: 26px;">
+                    <img src="logo.png" alt="Logo" width="50">
+                    <p class="m-0">Legal PDF</p>
+                </a>
+            </div>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="userMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                    Ziv Rozen, Adv.
+                    <img src="avatar.jpg" alt="user-image" id="userAvarter">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="userMenu" style="background-color: #FAF3ED;">
+                    <li><a class="dropdown-item" href="#">Order List</a></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="text-center text-capitalize justify-content-center mb-1 mt-1 fs-38 fw-semibold text-custom ">
+            <h2>Extract emails into a neat PDF, <span class="button-bg">Ready for legal processing</span></h2>
+            <h2>Best for lawyers &#33;</h2>
+         </div>
+    </section>
+
+    <main class="container my-3 d-flex justify-content-between">         
+        <div class="main-container row">
+            <!-- Left Section -->
+            <div class="left-container col-md-6 border mr-2 pb-5">
+                <h2 class="mb-4 convert">Convert Messages To PDF</h2>
+                <form>
+                    <!-- Email Provider -->
+                    <div class="mb-3">
+                        <label class="form-label">Choose Your Email Provider</label>
+                       
+                        <div class="email-options d-block">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="emailProvider" id="gmailOption" value="gmail">
+                              <label class="form-check-label" for="gmailOption">
+                                <img src="email.png" alt="email" class="email-icon">
+                                Gmail or Google Suites
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="emailProvider" id="outlookOption" value="outlook">
+                              <label class="form-check-label" for="outlookOption">
+                                <img src="outlook.png" alt="outlook" class="email-icon">
+                                Outlook Express or Hotmail Accounts
+                              </label>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- Email Login -->
+                    <div class="mb-3">
+                        <label for="emailLogin" class="form-label">Login To Your Email</label>
+                        <input type="email" class="form-control" id="emailLogin" placeholder="Your Email Address Or Any Google Suite">
+                    </div>
+
+                    <!-- WhatsApp Search -->
+                    <div class="mb-3">
+                        <label for="whatsappNumber" class="form-label">Now, Whose WhatsApp Should We Search To Extract?</label>
+                        <input type="text" class="form-control" id="whatsappNumber" placeholder="Enter WhatsApp Number You Wish To Extract">
+                    </div>
+
+                    <!-- WhatsApp Messages -->
+                    <div class="mb-3">
+                    
+                        <div class="form-check form-check-inline d-inline-flex" style="font-size: 15px;">
+                            <input class="form-check-input" type="radio" name="emailProvider" id="outlookOption" value="outlook">
+                            <img src="whatsapp.png" alt="whatsapp-icon" class="ml-1 mr-1 whatsapp-icon">
+                            <label class="form-check-label" for="outlookOption" style="color: black;">Would You Like To Extract WhatsApp Messages Instead?</label>
+                          </div>
+                        <p style="font-size: 16px;">With which of you content will you like to correpeonse</p>
+                        <!-- <label class="form-label">Would You Like To Extract WhatsApp Messages Instead?</label> -->
+                        <div class="row gx-2">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Contact Name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="+444| Contact Number">
+                            </div>
+                        </div>
+                        <button type="button" class="btn whatsapp-btn">
+                            Connect To WhatsApp <span><ion-icon name="send-outline"></ion-icon>
+                            </span>
+                        </button>
+                        <div class="line"></div>
+                    </div>
+
+                    <!-- Keywords -->
+                    <div class="mb-3">
+                        <label for="keywords" class="form-label">What About Keywords? Do You Want To Highlight Some?</label>
+                        <input type="text" class="form-control" id="keywords" placeholder="Keywords To Highlight, Separate By Comma">
+                    </div>
+                    <div class="d-block">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="keywords" >
+                            <label class="form-check-label" for="
+                            keywords">Extract Only Message Contain Keywords</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  id="keywords" >
+                            <label class="form-check-label" for="keywords">Extract All Found Messages, And Highlight The Keywords</label>
+                        </div>
+                    </div>
+                    <div>
+                        <p>View Other Additonal Options </p>
+                        <p>Should We List The Attachement Too?</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="keywords" >
+                            <label class="form-check-label" for="keywords">No, I Don't Need An Attachment List</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  id="keywords" >
+                            <label class="form-check-label" for="keywords">I Only Want The List Of Attachement, Not Correspondence</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio"  id="keywords" >
+                            <label class="form-check-label" for="keywords">I Want Them Both-Attachment and Correspondences </label>
+                        </div>
+                    </div>
+    
+
+                    <!-- Time Frame -->
+                    <div class="mb-3">
+                        <label class="form-label">What About Time Frame?</label>
+                        <div class="row gx-2 d-flex">
+                            <div class="col">
+                                <input type="date" class="form-control" placeholder="From">
+                            </div>
+                            <div class="col">
+                                <input type="date" class="form-control" placeholder="To">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">And Last, What Will Be The Language Of The Document?</label>
+                        <div class="custom-select-container">
+                          <select class="form-select">
+                            <option selected value="english" data-image="./asset/england.png">English</option>
+                            <option value="french" data-image="./asset/flags/french.png">French</option>
+                            <option value="spanish" data-image="./asset/flags/spanish.png">Spanish</option>
+                          </select>
+                        </div>
+                      </div>
+
+                    <button type="submit" class="btn button-bgg  w-100 bold "  style="background: #C5764F; color:#FAF3ED; ">Generate PDF</button>
+                </form>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-container col-md-6 border text-center">
+                <h2 class="mb-2 mt-2">Law Firm? Register Here</h2>
+                <p class="text-center text-capitalize justify-content-center text-custom mt-0 mb-3">
+                    We have an awesome solution for you&#33;</p>
+                <button class="btn border w-100 mb-4"><img src="email.png" alt="">
+                    Continue With Your Google Account
+                </button>
+                <p class="">Or</p>
+                <button class="btn w-100 mb-3 border">Enter Your Personal Or Work Email</button>
+                <button class="btn w-100 mb-3 mt-1 border button-bgg" style="background: #C5764F; color:#FAF3ED">Sign up</button>
+
+                <h3 class="mt-5">How It Works? Watch Below!</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light py-4 border-top">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <div>
+                <img src="logo.png" alt="Legal PDF Logo" class="mb-2" style="max-height: 50px;">
+                <h3 class="mt-1 mb-1">LegalPDF</h3>
+                <p>Email's Messages into an Organised <br>Document</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>London Office</p>
+                <p><ion-icon name="call-outline" class="icon"></ion-icon> +44 770 3647 933</p>
+                <p><ion-icon name="call-outline" class="icon"></ion-icon> +44 208 5053 311</p>
+                <p><ion-icon name="location-outline" class="icon"></ion-icon>18 Elington Road, E8 3PA</p>
+            </div>
+            <div class="legal">
+                <h4>Legal</h4>
+                <ul class="legal-faq list-styled ">
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Cookies Policy</a></li>
+                    <li><a href="#">Google API Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="sub-footer">
+            <p class="mt-3">&copy; 2023 LegalPDF. All rights reserved.</p>
+           <!-- Include Bootstrap CSS and Icons -->
+            <div class="footer-icons">
+                <div class="d-flex gap-3">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com" target="_blank" class="text-decoration-none text-dark" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com" target="_blank" class="text-decoration-none text-dark" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://www.twitter.com" target="_blank" class="text-decoration-none text-dark" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://www.github.com" target="_blank" class="text-decoration-none text-dark" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                    <div class="mb-3">
+                        <select class="form-select selected">
+                            <option selected value="english" data-image="./asset/england.png">English</option>
+                            <option value="french" data-image="./asset/flags/french.png">French</option>
+                            <option value="spanish" data-image="./asset/flags/spanish.png">Spanish</option>
+                        </select>
+                    </div> 
+    
+    
+            </div>
+            
+    
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</body>
+</html>
